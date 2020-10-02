@@ -132,3 +132,15 @@ build/Release
 node_modules
 cypress/videos
 cypress/screenshots
+
+
+# otras cosas a ignorar 
+screenshots
+videos
+out.js
+examples/*/cypress/logs
+examples/*/cypress/downloads
+snapshots.js
+.nyc_output
+coverage
+dist
