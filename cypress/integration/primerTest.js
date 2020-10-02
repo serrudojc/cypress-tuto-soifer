@@ -6,4 +6,7 @@ describe("Titulo", function () {
     //en esta funcion ponemos la prueba en si misma
     expect(a == b).to.equal(true);
   });
+  it("Vamos a probar una resta", () => {
+    expect(a - b).to.equal(0);
+  });
 });
