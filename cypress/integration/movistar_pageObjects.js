@@ -61,7 +61,7 @@ describe("Bateria de casos para Escuelita Cypress 2020", () => {
     filterPage.modelfilter("Samsung");
     filterPage.sortFilter("Precio - menor a mayor");
     cy.get(".item.last").eq(2).click();
-    cy.get("#movistar-pdp-technical-specifications-desktop").contains("Memoria interna");
+    cy.get("#movistar-pdp-technical-specifications-desktop").contains("Memoria interna").contains("32GB");
     cy.get("#movistar-pdp-show-attributes-table").click();
     cy.get("div").contains("Memoria Interna").next().contains("32GB");
   });
