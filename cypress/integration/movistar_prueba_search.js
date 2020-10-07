@@ -9,6 +9,7 @@ describe("Casos de prueba para probar el buscador", () => {
   });
 
   //Ojo, estoy capturando solo la primer pagina de resultados. Ver como iterar en el resto de paginas, si las tiene.
+  //Posible mejora. en lugar de repetir codigo, armar un array con los modelos a buscar e iterar.
 
   it("Buscar Moto G8", () => {
     searchPhonePage.searchAll("Moto G8");
