@@ -14,6 +14,11 @@ class searchPhonePage {
     cy.get(this.inputButton).click();
   };
 
+  searchAll = (element) => {
+    cy.get(this.searchButton).click();
+    cy.get(this.searchInput).type(element).type("{enter}");
+  };
+
   installments = (element) => {
     cy.get(this.divPrice).contains(element);
     cy.get(this.divBuyOptions).contains(element);
