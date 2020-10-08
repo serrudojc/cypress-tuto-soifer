@@ -9,30 +9,13 @@ describe("Casos de prueba para probar el buscador", () => {
   });
 
   //Ojo, estoy capturando solo la primer pagina de resultados. Ver como iterar en el resto de paginas, si las tiene.
-  //Posible mejora. en lugar de repetir codigo, armar un array con los modelos a buscar e iterar.
 
-  it("Buscar Moto G8", () => {
-    searchPhonePage.searchAll("Moto G8");
-    cy.screenshot("Moto G8");
-  });
+  const phone = ["Moto G8", "moto g8", "MOTO G8", "nokia", "one fusion"];
 
-  it("Buscar moto g8", () => {
-    searchPhonePage.searchAll("moto g8");
-    cy.screenshot("moto g8");
-  });
-
-  it("Buscar MOTO G8", () => {
-    searchPhonePage.searchAll("MOTO G8");
-    cy.screenshot("MOTO G8");
-  });
-
-  it("Buscar equipos nokia", () => {
-    searchPhonePage.searchAll("nokia");
-    cy.screenshot("nokia");
-  });
-
-  it("Buscar one fusion", () => {
-    searchPhonePage.searchAll("one fusion");
-    cy.screenshot("one prime");
-  });
+  for (let i = 0; i < phone.length; i++) {
+    it(`Buscar ${phone[i]}`, () => {
+      searchPhonePage.searchAll(phone[i]);
+      cy.screenshot(`${phone[i]}`);
+    });
+  }
 });
